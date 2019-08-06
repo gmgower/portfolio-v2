@@ -196,7 +196,58 @@ h5 {
    }
 /* End global */
 
+/* Start reusable */
+.container {
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
 
+.section-heading {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.section-heading h1 {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, .3);
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.section-heading h1::before, 
+.section-heading h1::after {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(255, 255, 255, .75)
+}
+
+.section-heading h1::before {
+    width: 10rem;
+    height: 3px;
+    border-radius: .8rem;
+}
+
+.section-heading h1::after {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    bottom: -1rem;
+}
+
+.section-heading h6 {
+    font-size: 1.6rem;
+    font-weight: 300;
+
+}
+/* End reusable */
 
 
 
@@ -350,9 +401,8 @@ header {
     font-weight: 300;
 }
 
-.profile-img {
+.portfolio-img {
     flex: 1;
-    margin-right: 5rem;
 }
 
 .about-details{
@@ -379,6 +429,9 @@ header {
 .fa-dribbble-square:hover{
     color:#ea4c89;
 }
-
-
 /* End about */
+
+
+/* Start services */
+
+/* End services  */
