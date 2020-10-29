@@ -182,13 +182,13 @@ img {
   width: 50px;
   right: 10%;
   top: 30%;
-  display: flex;;  
+  display: flex;
   justify-content: space-between;
   border-radius: 50%;
   overflow: hidden;
   animation: spin 10s linear infinite;
 }
-.effect-5 div{
+.effect-5 div {
   width: 1px;
   background-color: #4dd0e1;
 }
@@ -222,6 +222,34 @@ img {
   }
 }
 
+.section-title {
+  /* background-color: red; */
+  padding: 0 15px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  /* background-color: blue; */
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.section-title h2:before {
+  content: attr(data-heading);
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--skin-color);
+}
+
+.
 /* header */
 .header {
   /* background-color: gray; */
@@ -426,4 +454,50 @@ img {
   width: 100%;
   border-radius: 50%;
   border: 10px solid transparent;
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 0 80px;
+  min-height: 100vh;
+}
+
+.about-section .about-img {
+  /* background-color: blue; */
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding: 0 15px;
+}
+
+.about-section .about-img .img-box {
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.about-section .about-img .img-box img {
+  width: 100%;
+  border: 10px solid transparent;
+  border-radius: 5px;
+}
+
+.about-section .about-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+  padding: 0 15px;
+  /* background-color: red; */
+}
+
+.about-section .about-info p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  color: var(--text-black-600);
+}
+
+.about-section .about-info span {
+  font-weight: 600;
+}
+
+.about-section .about-info .btn-1 {
+  margin: 30px 20px 0 0;
 }
