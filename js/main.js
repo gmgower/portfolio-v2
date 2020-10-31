@@ -1,44 +1,26 @@
-// 44: 15
-// const menuBar = document.querySelector('.menu-toggler')
-// const navLinks = document.querySelector('.nav-list')
-// const links = document.querySelector('.nav-list li')
+/*about section tabs */
+(() => {
+  const aboutSection = document.querySelector(".about-section"),
+  tabsContainer = document.querySelector(".about-tabs");
 
-// menuBar.addEventListener('click', function(event) {
-//     console.log(event)
-//     navLinks.classList.toggle('open');
-//     links.forEach(link => {
-//       link.classList.toggle('open')
-//     })
-//     // menuBar1.toggle('open')
-// })
-
-// menuBar1.addEventListener('click', function(event){
-//     this.classList.toggle('open')
-// })
-
-
-$(document).ready(function() {
-  $('.menu-toggler').on('click', function() {
-    $(this).toggleClass('open');
-    $('.top-nav').toggleClass('open');
-  });
-
-$('.top-nav .nav-link').on('click', function () {
-  $('.menu-toggler').removeClass('open');
-  $('.top-nav').removeClass('open');
-});
-
-$('nav a[href*="#"]').on('click', function() {
-  $('html, body').animate(keyframes: {
-    scrollTop: $($(this).attr('href')).offset().top -100
-  }, 2000)
-});
-
-$('#up').on('click', function() {
-  $('html, body').animate(keyframes: {
-    scrollTop: 0
-  }, 2000)
-});
-
-});
-
+  tabsContainer.addEventListener("click", (event)=> {
+    // console.log(event.target)
+    /* if event.target contains 'tab-item' class and not contains 'active' class */
+    if(event.target.classList.contains("tab-item") && 
+      !event.target.classList.contains("active")){
+      //   console.log("event.target contains 'tab-item' class and not contains 'active' class");
+      // };
+      // console.log(event.target);
+      const target = event.target.getAttribute("data-target");
+      // console.log(target)
+      // deactivate existing active 'tab-item'
+      tabsContainer.querySelector(".active").classList.remove("outer-shadow", "active")
+      // activate new 'tab-item'
+      event.target.classList.add("active", "outer-shadow");
+      // deactivate existing active 'tab-content'
+      aboutSection.querySelector(".tab-content.active").classList.remove("active");
+      // activate new 'tab-content'
+      aboutSection.querySelector(target).classList.add("active");
+      }
+  })
+})();
