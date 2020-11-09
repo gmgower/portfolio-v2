@@ -556,7 +556,7 @@ img {
   font-weight: 500;
   color: var(--text-black-600);
   margin: 0;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .home-section .home-text .btn-1 {
